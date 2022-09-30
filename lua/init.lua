@@ -1,5 +1,6 @@
 local map = require("utils").map
 local man_init = require("man").init
+local bufclean_init = require("bufclean").bufclean_init
 local set = vim.opt
 local api = vim.api
 local Plug = vim.fn["plug#"]
@@ -29,12 +30,10 @@ Plug "jiangmiao/auto-pairs"
 Plug "preservim/nerdtree"
 Plug "nvim-lualine/lualine.nvim"
 Plug "ellisonleao/gruvbox.nvim"
+Plug "yaocccc/nvim-lines.lua"
 vim.call("plug#end")
-
-require("lualine").setup{
-  options={theme="gruvbox"},
-}
 
 vim.cmd([[color gruvbox]])
 
 man_init()
+bufclean_init()
